@@ -15,7 +15,7 @@ function addVideoStream(streamId) {
 document.getElementById("join").onclick = function () {
   let channelName = document.getElementById("channelName").value;
   let Username = document.getElementById("username").value;
-  let appId = "53ca517bfccd44f388878863903c1dc8";
+  let appId = "e230b70835a14c70900c7652aec194b7";
 
   let client = AgoraRTC.createClient({
     mode: "live",
