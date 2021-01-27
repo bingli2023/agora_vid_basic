@@ -39,9 +39,7 @@ document.getElementById("joinHost").onclick = function () {
       client.publish(localStream);
     });
   });
-};
 
-document.getElementById("joinClient").onclick = function () {
   client.on("stream-added", function (evt) {
     console.log("Added Stream");
     client.subscribe(evt.stream, handlefail);
