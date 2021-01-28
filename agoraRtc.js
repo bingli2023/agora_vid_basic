@@ -9,14 +9,20 @@ function addVideoStream(streamId) {
   // Query the container to which the remote stream belong.
   let remoteContainer = document.getElementById("remoteStream");
   // Creates a new div for every stream
+  // Create a new div for every participant ID
   let streamDiv = document.createElement("div");
-  // Assigns the elementId to the div.
+  let participantName = document.createElement("div");
+  // Assigns the elementId to the remote stream div.
   streamDiv.id = streamId;
-  // Takes care of the lateral inversion
+  // Takes care of the lateral inversion of new remote streams
   streamDiv.style.transform = "rotateY(180deg)";
   streamDiv.style.height = "250px";
+  // Show participant Id on the left
+  participantName.innerHTML = streamId;
+  let pContainer = document.getElementById("participants");
   // Adds the div to the container.
   remoteContainer.appendChild(streamDiv);
+  pContainer.appendChild(participantName);
 }
 
 document.getElementById("join").onclick = function () {

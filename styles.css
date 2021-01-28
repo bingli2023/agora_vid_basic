@@ -73,8 +73,14 @@ input {
 #remoteStream {
   text-align: left;
   margin-top: 20px;
-  justify-self: center;
   border: 2px solid #099dfd;
   width: 400px;
   height: 250px;
+  white-space: nowrap;
+  overflow: scroll;
+}
+
+/* select all the div elements where parent is remoteStream */
+#remoteStream > div {
+  display: inline-block;
 }
